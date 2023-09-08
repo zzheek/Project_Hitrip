@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>클릭하자.</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    	  $("button").click(function () {
+    	    var data = {
+    	      b_no: ["8771701765"],
+    	    };
+
+    	    let serviceKey = "ZVcb67P2t8L1VjTSji3q618upDdjuw8JOjyBV5gqQvzw2uMCzIysJ2Uhr%2FLwveHjrnfEVY1q0aD2gRpbaS5WvA%3D%3D"; // 본인의 유효한 API Key로 변경
+
+    	    $.ajax({
+    	      url: "https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=" + serviceKey,
+    	      type: "POST",
+    	      data: JSON.stringify(data),
+    	      dataType: "JSON",
+    	      contentType: "application/json",
+    	      accept: "application/json",
+    	      success: function (result) {
+    	        // API 호출 성공 시 실행되는 부분
+    	        console.log("결과:: ", result);
+
+    	     // b_stt_cd 값 추출
+    	          var b_stt_cd = result.data[0].status.b_stt_cd;
+    	          if (b_stt_cd !== undefined) {
+    	            console.log("b_stt_cd 값:: ", b_stt_cd);
+    	          } else {
+    	            console.log("b_stt_cd 값이 없습니다.");
+    	          }
+    	        },
+    	      error: function (error) {
+    	        // API 호출 실패 시 실행되는 부분
+    	        console.log("에러: ", error);
+    	      },
+    	    });
+    	  });
+    	});
+
+    </script>
+<script>
+
+</script>
+  </body>
+</html>

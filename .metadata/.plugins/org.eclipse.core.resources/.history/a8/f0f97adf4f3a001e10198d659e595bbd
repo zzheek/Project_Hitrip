@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="ReviewSpace">
+
+	<typeAlias  alias="egovMap"   type="org.egovframe.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="defaultVO" type="egov.hitrip.service.DefaultVO"/>
+	<typeAlias  alias="reviewVO" type="egov.hitrip.service.ReviewVO"/>
+	
+	<!-- 여행 후기 등록 insert -->
+	<insert id="reviewDAO.insertReviewSave">
+		INSERT INTO TBL_REVIEW( REVIEWUNQ
+								,USERID
+								,REVIEWPASS
+								,REVIEWRDATE
+								,REVIEWUDATE
+								,REVIEWSDATE
+								,REVIEWEDATE
+								,REVIEWCONTENT
+								,REVIEWHITS
+								,REVIEWSTAR
+								,REVIEWSRC
+								,REVIEWTITLE ) 
+							
+		           VALUES(   TBL_REVIEW_SEQ.NEXTVAL 
+						    ,'$userid$'
+							,'$reviewpass$'
+							,sysdate
+							,sysdate
+							,'$reviewsdate$'
+							,'$reviewedate$'
+							,'$reviewcontent$'
+							,'$reviewhits$'
+							,'$reviewstar$'
+							,'$reviewsrc$'
+							,'$reviewtitle$')
+										  
+	</insert>
+	
+	<sql id="reviewList">
+		SELECT   REVIEWUNQ
+				,USERID
+				,REVIEWPASS
+				,TO_CHAR(REVIEWRDATE,'YYYY-MM-DD') REVIEWRDATE
+				,TO_CHAR(REVIEWUDATE,'YYYY-MM-DD') REVIEWUDATE
+				,TO_CHAR(REVIEWSDATE,'YYYY-MM-DD') REVIEWSDATE
+				,TO_CHAR(REVIEWEDATE,'YYYY-MM-DD') REVIEWEDATE
+				,REVIEWCONTENT
+				,REVIEWHITS
+				,REVIEWSTAR
+				,REVIEWSRC
+				,REVIEWTITLE
+		FROM
+				 TBL_REVIEW 
+		WHERE	
+				1=1
+			<isNotNull property="searchCondition">
+	  		<isNotEmpty property="searchCondition">
+	    		AND $searchCondition$ LIKE '%$searchKeyword$%'
+      		</isNotEmpty>
+			</isNotNull>
+	</sql>
+	
+	<!-- 여행 후기 리스트 select -->
+	<select id="reviewDAO.selectReviewList" resultClass="egovMap">
+	 	SELECT b.* FROM (
+			SELECT rownum rn, a.* FROM (
+				<include refid="reviewList"/>
+				ORDER BY reviewunq DESC
+			) a
+		) b			
+		WHERE 	
+		  	rn  BETWEEN  $firstIndex$  AND  $lastIndex$ 
+	</select>
+	
+	<!-- 조회수 증가 -->
+	<update id="reviewDAO.updateReviewHits">
+		UPDATE TBL_REVIEW SET REVIEWHITS=REVIEWHITS+1 WHERE REVIEWUNQ=#reviewunq#
+	</update>
+	
+	<!-- 여행 후기 총 개수 total -->
+	<select id="reviewDAO.selectReviewTotal" resultClass="int">
+		SELECT COUNT(*) FROM (<include refid="reviewList"/>)
+	</select>
+	
+	<!-- 여행 후기 디테일 select -->
+	<select id="reviewDAO.selectReviewDetail" resultClass="reviewVO">
+		SELECT   REVIEWUNQ
+				,USERID
+				,REVIEWPASS
+				,TO_CHAR(REVIEWRDATE,'YYYY-MM-DD') REVIEWRDATE
+				,TO_CHAR(REVIEWUDATE,'YYYY-MM-DD') REVIEWUDATE
+				,TO_CHAR(REVIEWSDATE,'YYYY-MM-DD') REVIEWSDATE
+				,TO_CHAR(REVIEWEDATE,'YYYY-MM-DD') REVIEWEDATE
+				,REVIEWCONTENT
+				,REVIEWHITS
+				,REVIEWSTAR
+				,REVIEWSRC
+				,REVIEWTITLE
+		 FROM TBL_REVIEW 
+		WHERE REVIEWUNQ='$reviewunq$' 
+	</select>
+
+	<!-- 여행 후기 삭제 delete -->
+	<delete id="reviewDAO.deleteReview">
+		DELETE FROM TBL_REVIEW WHERE REVIEWUNQ='$reviewunq$'
+	</delete>
+	
+	
+	<!-- 여행 후기 수정 update -->
+	<update id="reviewDAO.updateReview">
+		UPDATE TBL_REVIEW SET   REVIEWUDATE=sysdate
+								,REVIEWSDATE=#reviewsdate#
+								,REVIEWEDATE=#reviewedate#
+								,REVIEWCONTENT=#reviewcontent#
+								,REVIEWSTAR=#reviewstar#
+								,REVIEWTITLE=#reviewtitle#
+								,REVIEWPASS=#reviewpass#
+	     WHERE REVIEWUNQ=#reviewunq# 
+	
+	</update>
+	
+</sqlMap>
+
+
+
+
+

@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\HITRIPver0818\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1902735469.index
+846838239.index
+1120108092.index
+1928360314.index
+2963843503.index
+2683059603.index
+3657277324.index
