@@ -1,5 +1,5 @@
 # ✈️ Project HITRIP  
-<img width="392" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/93a8613c-53e7-4b95-a824-6bdd1c468e28">
+<img width="392" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/d312425b-a398-4e69-8265-97c86de9f753">
 
 <br><br>
 
@@ -37,9 +37,9 @@
     <td><b><a href="https://github.com/zzheek/Project_Hitrip/blob/68ae212d97f08f6721624cf144305caba9792cc7/src/main/webapp/bsnm/bsnmJoinWrite.jsp#L114-L181">사업자 회원가입</a></b></td>
   </tr>
   <tr>
-    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/6af1de36-5a7f-41be-9d43-1ceb42f7ce34"></td>
-    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/fd03b9e7-a473-41d3-8268-87fd60aee49f"></td>
-    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/da27439c-07fc-49b1-89c5-3959f9049bc8"></td>
+    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/e53aff21-a1f0-4f52-9bd8-f19984dab404"></td>
+    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/23464ffe-bf78-4939-9d58-8d32f4c68894"></td>
+    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/a99474ac-9a7f-4bc6-8b02-e9ef5ac29fb7"></td>
   </tr>
   <tr>
     <td><b><a href="https://github.com/zzheek/Project_Hitrip/blob/68ae212d97f08f6721624cf144305caba9792cc7/src/main/webapp/review/reviewDetail.jsp#L213-L281">게시물 추천 기능</a></b></td>
@@ -47,9 +47,9 @@
     <td><b><a href="https://github.com/zzheek/Project_Hitrip/blob/68ae212d97f08f6721624cf144305caba9792cc7/src/main/java/egov/hitrip/web/ReviewController.java#L121-L180">파일 업로드 기능</a></b></td>
   </tr>
   <tr>
-    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/5f46b4f4-cbe8-4ae0-8143-ed59c2e72a78"></td>
-    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/70062497-1e5a-41aa-8853-11532e2c897c"></td>
-    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/a1d32c78-a97d-4403-8a5a-aba95746da5f"></td>
+    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/21e7dabc-0e4a-4c36-af5d-fb0ef22efc21"></td>
+    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/ac9d33b9-809c-4718-97a4-3816dec96fd3"></td>
+    <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/96b83646-d34a-42bb-9aeb-5e4fdce01986"></td>
   </tr>
 </table>
 <br>
@@ -60,12 +60,12 @@
 |트러블슈팅 원인|
 |:---:|
 |리뷰 테이블에 REVIEWLIKE라는 컬럼을 추가하여 좋아요 및 좋아요 취소 기능을 구현하려 함.<br>위 방식으로 구현시 각 게시물당 좋아요는 특정 유저(첫 클릭 유저)만 클릭 가능|
-|<img width="800" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/79acc8ba-4203-4fa5-9ae8-0790abdfb84e">|
+|<img width="800" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/e73643f0-9707-4d49-ab3a-2d19eb645009">|
 ||
 ||
 |<b>트러블슈팅 해결</b>|
 |‘TBL_REVIEW_LIKE ‘ 테이블을 생성하여 각 유저별로 게시물당 좋아요 클릭시 유저아이디와 리뷰의 고유번호를 DB에 저장(insert).<br>버튼 클릭시 유저의 해당 게시물에 대한 좋아요 클릭 여부 확인 -> 재클릭시 db에 저장된 데이터를 delete하는 방식으로 좋아요 취소|
-|<img width="800" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/ad6218f8-b4e5-4f47-8759-e81682cc2b8d">|
+|<img width="800" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/121780c5-13c7-48d4-9b27-f5fd6df03bf6">|
 
 <br>
 
@@ -73,7 +73,7 @@
 🏆**하이미디어 프로젝트 포트폴리오 발표회 최우수상** 
 
 
-<img width="561" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/9b402f68-4982-48f7-8dcf-7c2b93e9bcf3">
+<img width="561" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/36a91970-0ee1-4d70-a489-bdafe7998960">
 
 
 
