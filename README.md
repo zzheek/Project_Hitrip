@@ -52,7 +52,7 @@
     <td><img width="250" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/a1d32c78-a97d-4403-8a5a-aba95746da5f"></td>
   </tr>
 </table>
-
+<br><br>
 ## 수상
 🏆**하이미디어 프로젝트 포트폴리오 발표회 최우수상** 
 
