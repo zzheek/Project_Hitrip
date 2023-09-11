@@ -1,5 +1,6 @@
 # ✈️ HITRIP 
-여행 커뮤니티
+<img width="392" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/93a8613c-53e7-4b95-a824-6bdd1c468e28">
+
 <br><br>
 
 ## 프로젝트 소개
@@ -30,7 +31,7 @@
 <table>
   <tr>
     <td><b><a href="https://github.com/zzheek/Project_Hitrip/blob/3252ef542a1a11e5b8f009d1dd590b39a0b2cfed/src/main/webapp/main/main.jsp#L184C1-L442">메인 페이지</a></b></td>
-    <td><b>국내 여행지</b></td>
+    <td><b><a href="https://github.com/zzheek/Project_Hitrip/blob/c3a836f4bbb979230594ba247697757ed86390d0/src/main/webapp/trip/tripList.jsp#L144-L173">국내 여행지</a></b></td>
     <td><b>사업자 회원가입</b></td>
   </tr>
   <tr>
