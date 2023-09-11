@@ -53,6 +53,13 @@
   </tr>
 </table>
 
+## 수상
+🏆**하이미디어 프로젝트 포트폴리오 발표회 최우수상** 
+
+
+<img width="561" alt="image" src="https://github.com/zzheek/Project_Hitrip/assets/133830185/9b402f68-4982-48f7-8dcf-7c2b93e9bcf3">
+
+
 
 
 
