@@ -24,10 +24,10 @@
 * Front : HTML5 / CSS3 / JS / jQuery
 * Framework : egovFramework 4.0
 * Database : Oracle 19c
-* Server : apache tomcat 9.0
+* Server : Apache tomcat 9.0
 * ORM : ibatis
-* Tool : Eclips / Github
-* API : TourAPI / Kakaomap Map API
+* Tool : Eclipse / Github
+* API : TourAPI / Kakaomap API
 <br><br>
 
 ## ✔️ 담당 기능
