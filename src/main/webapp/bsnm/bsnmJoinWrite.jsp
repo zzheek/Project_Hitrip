@@ -125,7 +125,7 @@ $(function(){
 	               var data = {  "b_no": [""+ bsnmno +""] }; // String b_no = "[1234123456]";
 
 	               $.ajax({
-		               url: "https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=NGC3J%2F3kwKWZZORfbmneNB50s19CnM7Z3ggMyc55TMoPMLUH1G1Sd8sxXF2IkeElWi4BOMTCiIzjGK8dd6Crdw%3D%3D",  // serviceKey 값을 xxxxxx에 입력
+		               url: "https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=서비스키",  // serviceKey 값을 xxxxxx에 입력
 		               type: "POST",
 		               data: JSON.stringify(data), 
 		               
